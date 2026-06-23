@@ -166,11 +166,38 @@ function ResultContent() {
         {/* Result card */}
         <div ref={resultCardRef} className="rounded-2xl p-6 sm:p-8 mb-6" style={{ backgroundColor: theme.cardBg, border: `1px solid ${theme.accentLight}40`, color: theme.text }}>
 
-          {/* Header */}
-          <p className="text-xs tracking-widest mb-4" style={{ color: theme.muted }}>你的拉拉人物类型是</p>
-          <h1 className="text-2xl sm:text-3xl font-bold mb-1">{char.name}</h1>
-          <p className="text-sm mb-2" style={{ color: theme.muted }}>— {char.source}</p>
-          <blockquote className="italic text-sm mb-6 pl-4" style={{ borderLeft: `3px solid ${theme.accent}`, color: theme.muted }}>
+          {/* Poster + Header */}
+          {char.poster && (
+            <div className="flex gap-5 mb-6">
+              <a href={char.doubanUrl || "#"} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+                <img
+                  src={char.poster}
+                  alt={char.source}
+                  className="w-24 sm:w-28 h-36 sm:h-40 object-cover rounded-lg"
+                />
+              </a>
+              <div className="flex flex-col justify-center">
+                <p className="text-[10px] tracking-widest mb-2" style={{ color: theme.muted }}>你的拉拉人物类型是</p>
+                <h1 className="text-2xl sm:text-3xl font-bold mb-1">{char.name}</h1>
+                <p className="text-xs mb-2" style={{ color: theme.muted }}>— {char.source}</p>
+                {char.doubanUrl && (
+                  <a href={char.doubanUrl} target="_blank" rel="noopener noreferrer" className="text-xs inline-flex items-center gap-1 mt-1" style={{ color: theme.accent }}>
+                    豆瓣 →
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+          {!char.poster && (
+            <>
+              <p className="text-xs tracking-widest mb-4" style={{ color: theme.muted }}>你的拉拉人物类型是</p>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-1">{char.name}</h1>
+              <p className="text-sm mb-2" style={{ color: theme.muted }}>— {char.source}</p>
+            </>
+          )}
+
+          {/* Quote */}
+          <blockquote className="italic text-sm mb-5 pl-4" style={{ borderLeft: `3px solid ${theme.accent}`, color: theme.muted }}>
             &ldquo;{char.quote}&rdquo;
           </blockquote>
 
@@ -243,30 +270,6 @@ function ResultContent() {
               </div>
             </div>
           ))}
-
-          {/* 影片信息 */}
-          {char.doubanUrl && char.poster && (
-            <div className="mt-6">
-              <SectionTitle theme={theme}>来自</SectionTitle>
-              <a
-                href={char.doubanUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-3 rounded-xl transition-opacity hover:opacity-80"
-                style={{ backgroundColor: theme.accentLight + "15", border: `1px solid ${theme.accentLight}30`, textDecoration: "none", color: theme.text }}
-              >
-                <img
-                  src={char.poster}
-                  alt={char.source}
-                  className="w-14 h-20 object-cover rounded-md flex-shrink-0"
-                />
-                <div>
-                  <p className="text-sm font-semibold">{char.source}</p>
-                  <p className="text-xs mt-1" style={{ color: theme.muted }}>在豆瓣查看 →</p>
-                </div>
-              </a>
-            </div>
-          )}
 
           {/* Footer */}
           <p className="text-center text-xs mt-6 italic" style={{ color: theme.muted }}>{theme.vibe}</p>
