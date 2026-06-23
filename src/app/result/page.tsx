@@ -151,12 +151,25 @@ function ResultContent() {
     try {
       const html2canvas = (await import("html2canvas")).default;
       const canvas = await html2canvas(el, { backgroundColor: theme.bg, scale: 2 });
-      const link = document.createElement("a");
-      link.download = `我是${char.name}.png`;
-      link.href = canvas.toDataURL();
-      link.click();
+      const dataUrl = canvas.toDataURL("image/png");
+
+      // Mobile: open image in new tab so user can long-press to save
+      // Desktop: trigger download
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        const newTab = window.open();
+        if (newTab) {
+          newTab.document.write(`<html><head><title>长按保存图片</title><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;display:flex;flex-direction:column;align-items:center;background:#111;padding:20px"><p style="color:#999;font-size:14px;margin-bottom:10px">长按图片保存到相册</p><img src="${dataUrl}" style="max-width:100%;border-radius:12px" /></body></html>`);
+          newTab.document.close();
+        }
+      } else {
+        const link = document.createElement("a");
+        link.download = `我是${char.name}.png`;
+        link.href = dataUrl;
+        link.click();
+      }
     } catch {
-      alert("图片生成失败");
+      alert("图片生成失败，请尝试截屏保存");
     }
   }, [char.name, theme.bg]);
 
@@ -197,12 +210,10 @@ function ResultContent() {
               />
             </a>
           )}
-          {!char.poster && !char.doubanUrl && (
-            <>
-              <p className="text-xs tracking-widest mb-4" style={{ color: theme.muted }}>你的拉拉人物类型是</p>
-              <h1 className="text-2xl sm:text-3xl font-bold mb-1">{char.name}</h1>
-              <p className="text-sm mb-2" style={{ color: theme.muted }}>— {char.source}</p>
-            </>
+          {!char.poster && char.doubanUrl && (
+            <a href={char.doubanUrl} target="_blank" rel="noopener noreferrer" className="block mb-4 text-xs" style={{ color: theme.accent }}>
+              豆瓣 →
+            </a>
           )}
 
           {/* Quote */}
