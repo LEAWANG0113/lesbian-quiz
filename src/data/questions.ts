@@ -24,7 +24,7 @@ export const questions: QuizQuestion[] = [
         scores: { carol: 4, marianne: 3, therese: 3 },
       },
       {
-        text: "睡到自然醒，旁边换了个人也无所谓",
+        text: "睡到自然醒，旁边换了个女朋友也无所谓",
         scores: { shane: 3, emma: 3 },
       },
       {
@@ -32,11 +32,11 @@ export const questions: QuizQuestion[] = [
         scores: { dana: 2, wil: 4, sookhee: 3 },
       },
       {
-        text: "打开手机看看群里又发生了什么drama",
+        text: "打开手机看看姐妹群里又发生了什么drama",
         scores: { alice: 3, vivian: 3 },
       },
       {
-        text: "给她做早餐",
+        text: "给女朋友做早餐",
         scores: { tina: 2, adele: 3, hideko: 2 },
       },
       {
@@ -98,14 +98,14 @@ export const questions: QuizQuestion[] = [
     id: 4,
     category: "daily",
     categoryLabel: "日常",
-    question: "你在朋友聚会中通常是什么角色？",
+    question: "你在姐妹聚会中通常是什么角色？",
     options: [
       {
         text: "气氛担当，全场都围着你转",
         scores: { vivian: 4, carmen: 3, alice: 2 },
       },
       {
-        text: "安静坐角落，但总有人被你吸引过来",
+        text: "安静坐角落，但总有女生被你吸引过来",
         scores: { heloise: 4, marianne: 3, shane: 2 },
       },
       {
@@ -113,7 +113,7 @@ export const questions: QuizQuestion[] = [
         scores: { bette: 2, carol: 3, hideko: 3 },
       },
       {
-        text: "跟最亲的一两个人聊深度话题",
+        text: "跟最亲的一两个姐妹聊深度话题",
         scores: { therese: 4, adele: 3, wil: 2 },
       },
       {
@@ -131,19 +131,19 @@ export const questions: QuizQuestion[] = [
   {
     id: 5,
     category: "ex",
-    categoryLabel: "前任",
-    question: "分手后你通常怎么处理？",
+    categoryLabel: "前女友",
+    question: "和前女友分手后你通常怎么处理？",
     options: [
       {
-        text: "迅速开始下一段，最好的疗伤是新欢",
+        text: "迅速认识新的女生，最好的疗伤是新欢",
         scores: { shane: 3, emma: 3 },
       },
       {
-        text: "把所有照片删了，假装这个人不存在",
+        text: "把和她的所有照片删了，假装这个人不存在",
         scores: { heloise: 4, sookhee: 3 },
       },
       {
-        text: "和前任变成朋友，毕竟圈子就这么大",
+        text: "和前女友变成朋友，毕竟圈子就这么大",
         scores: { alice: 2, wil: 4 },
       },
       {
@@ -155,7 +155,7 @@ export const questions: QuizQuestion[] = [
         scores: { carol: 4, marianne: 4, hideko: 3 },
       },
       {
-        text: "我没有前任（女朋友），我是直的",
+        text: "我没有前女友，我是直的",
         scores: { lyt: 6, htt: 5 },
       },
     ],
@@ -163,19 +163,19 @@ export const questions: QuizQuestion[] = [
   {
     id: 6,
     category: "ex",
-    categoryLabel: "前任",
-    question: "前任突然发消息说想见面，你的反应是？",
+    categoryLabel: "前女友",
+    question: "前女友突然发消息说想见面，你的反应是？",
     options: [
       {
         text: "已读不回",
         scores: { heloise: 4, sookhee: 3 },
       },
       {
-        text: "秒回，见呗",
+        text: "秒回，见呗，想她了",
         scores: { adele: 4, therese: 3 },
       },
       {
-        text: "先截图发群里讨论",
+        text: "先截图发姐妹群里讨论",
         scores: { alice: 2, vivian: 4 },
       },
       {
@@ -187,7 +187,7 @@ export const questions: QuizQuestion[] = [
         scores: { marianne: 4, jenny: 2 },
       },
       {
-        text: "我说了我没有女的前任，她只是我以前的好闺蜜",
+        text: "我说了我没有前女友，她只是我以前的好闺蜜",
         scores: { lyt: 6, htt: 5 },
       },
     ],
@@ -195,27 +195,27 @@ export const questions: QuizQuestion[] = [
   {
     id: 7,
     category: "ex",
-    categoryLabel: "前任",
-    question: "你在感情中最大的问题是？",
+    categoryLabel: "前女友",
+    question: "你和女朋友之间最大的问题是？",
     options: [
       {
         text: "太怕承诺，一认真就想跑",
         scores: { shane: 3, emma: 4 },
       },
       {
-        text: "太强势，什么都想控制",
+        text: "太强势，什么都想替她决定",
         scores: { bette: 3, carol: 2 },
       },
       {
-        text: "太容易爱上不该爱的人",
+        text: "太容易爱上不该爱的女生",
         scores: { adele: 4, carmen: 2, therese: 3 },
       },
       {
-        text: "太敏感，容易受伤",
+        text: "太敏感，她一句话就能让我崩溃",
         scores: { jenny: 1, heloise: 3, tina: 2 },
       },
       {
-        text: "不够坦诚，藏太多",
+        text: "不够坦诚，对她藏太多",
         scores: { wil: 4, hideko: 4, marianne: 3 },
       },
       {
@@ -230,18 +230,18 @@ export const questions: QuizQuestion[] = [
     id: 8,
     category: "meme",
     categoryLabel: "梗",
-    question: "经典场景：在lesbian bar里，你最可能在做什么？",
+    question: "经典场景：在les bar里，你最可能在做什么？",
     options: [
       {
-        text: "靠在吧台，等别人来搭讪",
+        text: "靠在吧台，等别的女生来搭讪",
         scores: { heloise: 4, emma: 3, shane: 2 },
       },
       {
-        text: "跟朋友分析场内每个人的关系图谱",
+        text: "跟姐妹分析场内每个人的关系图谱",
         scores: { alice: 2, vivian: 3 },
       },
       {
-        text: "包场，请所有人喝酒",
+        text: "包场，请所有姐妹喝酒",
         scores: { helena: 2, carol: 4 },
       },
       {
@@ -253,7 +253,7 @@ export const questions: QuizQuestion[] = [
         scores: { sookhee: 4, carmen: 2, vivian: 3 },
       },
       {
-        text: "我为什么会去lesbian bar？我是被朋友拉去的",
+        text: "我为什么会去les bar？我是被朋友拉去的",
         scores: { lyt: 6, htt: 5 },
       },
     ],
@@ -262,18 +262,18 @@ export const questions: QuizQuestion[] = [
     id: 9,
     category: "meme",
     categoryLabel: "梗",
-    question: "U-Haul问题：认识多久你觉得可以同居？",
+    question: "U-Haul问题：认识一个女生多久你觉得可以同居？",
     options: [
       {
         text: "第二次约会就可以搬了（经典lesbian）",
         scores: { adele: 4, sookhee: 3, carmen: 2 },
       },
       {
-        text: "同居？我连过夜都不一定",
+        text: "同居？我连在她家过夜都不一定",
         scores: { shane: 3, emma: 3 },
       },
       {
-        text: "至少半年，我需要确认这段关系值得",
+        text: "至少半年，我需要确认和她的关系值得",
         scores: { carol: 4, wil: 3, bette: 1 },
       },
       {
@@ -281,7 +281,7 @@ export const questions: QuizQuestion[] = [
         scores: { marianne: 4, hideko: 3, jenny: 1 },
       },
       {
-        text: "看感觉，对的人什么时候都行",
+        text: "看感觉，对的女生什么时候都行",
         scores: { heloise: 4, therese: 3, dana: 1 },
       },
       {
@@ -297,7 +297,7 @@ export const questions: QuizQuestion[] = [
     question: "如果你是The L Word里的角色，你在Alice的chart上会是什么位置？",
     options: [
       {
-        text: "chart中心，连线最多的那个",
+        text: "chart中心，和最多女生有过关系的那个",
         scores: { shane: 2, vivian: 3, alice: 1, helena: 1 },
       },
       {
@@ -305,15 +305,15 @@ export const questions: QuizQuestion[] = [
         scores: { alice: 3, vivian: 2 },
       },
       {
-        text: "只有一条线，但那条线最长",
+        text: "只有一条线，但和她的那条线最长",
         scores: { carol: 4, marianne: 4, tina: 1 },
       },
       {
-        text: "不在chart上，谁也不知道我的感情生活",
+        text: "不在chart上，谁也不知道我跟哪个女生在一起",
         scores: { wil: 4, hideko: 4, sookhee: 3 },
       },
       {
-        text: "chart上的虚线——暧昧但从未official",
+        text: "chart上的虚线——和她暧昧但从未official",
         scores: { therese: 4, adele: 3, dana: 1 },
       },
       {
@@ -326,26 +326,26 @@ export const questions: QuizQuestion[] = [
     id: 11,
     category: "meme",
     categoryLabel: "梗",
-    question: "哪种约会方式最吸引你？",
+    question: "和心仪的女生约会，哪种方式最吸引你？",
     options: [
       {
-        text: "高级餐厅，红酒，隔着桌子对视",
+        text: "高级餐厅，红酒，隔着桌子和她对视",
         scores: { carol: 4, hideko: 4, bette: 1 },
       },
       {
-        text: "一起看一部没人听过的独立电影",
+        text: "和她一起看一部没人听过的独立电影",
         scores: { therese: 4, marianne: 3, emma: 3 },
       },
       {
-        text: "骑摩托兜风，去一个没计划的地方",
+        text: "带她骑摩托兜风，去一个没计划的地方",
         scores: { heloise: 4, sookhee: 4, shane: 1 },
       },
       {
-        text: "在家做饭，窝沙发上聊到天亮",
+        text: "和她在家做饭，窝沙发上聊到天亮",
         scores: { wil: 4, adele: 3, tina: 2 },
       },
       {
-        text: "夜店→天台→看日出，一整夜的冒险",
+        text: "和她去夜店→天台→看日出，一整夜的冒险",
         scores: { vivian: 4, carmen: 3, helena: 1 },
       },
       {
@@ -361,11 +361,11 @@ export const questions: QuizQuestion[] = [
     question: "最后一题：选一句最能代表你的话",
     options: [
       {
-        text: "爱过，不后悔",
+        text: "爱过她，不后悔",
         scores: { adele: 4, heloise: 4, carmen: 1 },
       },
       {
-        text: "不要遗憾，要记住",
+        text: "不要遗憾，要记住她",
         scores: { marianne: 4, carol: 4 },
       },
       {
@@ -373,11 +373,11 @@ export const questions: QuizQuestion[] = [
         scores: { emma: 4, sookhee: 4, heloise: 2 },
       },
       {
-        text: "我知道我想要什么",
+        text: "我知道我想要什么样的女生",
         scores: { vivian: 4, hideko: 4, bette: 1 },
       },
       {
-        text: "陪在你身边就够了",
+        text: "陪在她身边就够了",
         scores: { therese: 4, wil: 3, adele: 3 },
       },
       {
