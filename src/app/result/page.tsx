@@ -166,29 +166,38 @@ function ResultContent() {
         {/* Result card */}
         <div ref={resultCardRef} className="rounded-2xl p-6 sm:p-8 mb-6" style={{ backgroundColor: theme.cardBg, border: `1px solid ${theme.accentLight}40`, color: theme.text }}>
 
-          {/* Poster + Header */}
-          {char.poster && (
-            <div className="flex gap-5 mb-6">
-              <a href={char.doubanUrl || "#"} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
-                <img
-                  src={char.poster}
-                  alt={char.source}
-                  className="w-24 sm:w-28 h-36 sm:h-40 object-cover rounded-lg"
-                />
-              </a>
-              <div className="flex flex-col justify-center">
-                <p className="text-[10px] tracking-widest mb-2" style={{ color: theme.muted }}>你的拉拉人物类型是</p>
-                <h1 className="text-2xl sm:text-3xl font-bold mb-1">{char.name}</h1>
-                <p className="text-xs mb-2" style={{ color: theme.muted }}>— {char.source}</p>
-                {char.doubanUrl && (
-                  <a href={char.doubanUrl} target="_blank" rel="noopener noreferrer" className="text-xs inline-flex items-center gap-1 mt-1" style={{ color: theme.accent }}>
-                    豆瓣 →
-                  </a>
-                )}
-              </div>
+          {/* Character avatar + info */}
+          <div className="flex gap-4 mb-6">
+            <img
+              src={`/characters/${char.id}.jpg`}
+              alt={char.name}
+              className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover flex-shrink-0"
+              style={{ border: `3px solid ${theme.accent}` }}
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
+            <div className="flex flex-col justify-center min-w-0">
+              <p className="text-[10px] tracking-widest mb-1" style={{ color: theme.muted }}>你的拉拉人物类型是</p>
+              <h1 className="text-xl sm:text-2xl font-bold mb-0.5 truncate">{char.name}</h1>
+              <p className="text-xs mb-1" style={{ color: theme.muted }}>— {char.source}</p>
+              {char.doubanUrl && (
+                <a href={char.doubanUrl} target="_blank" rel="noopener noreferrer" className="text-xs" style={{ color: theme.accent }}>
+                  豆瓣 →
+                </a>
+              )}
             </div>
+          </div>
+
+          {/* Film poster */}
+          {char.poster && (
+            <a href={char.doubanUrl || "#"} target="_blank" rel="noopener noreferrer" className="block mb-6">
+              <img
+                src={char.poster}
+                alt={char.source}
+                className="w-full h-40 sm:h-48 object-cover rounded-lg opacity-80"
+              />
+            </a>
           )}
-          {!char.poster && (
+          {!char.poster && !char.doubanUrl && (
             <>
               <p className="text-xs tracking-widest mb-4" style={{ color: theme.muted }}>你的拉拉人物类型是</p>
               <h1 className="text-2xl sm:text-3xl font-bold mb-1">{char.name}</h1>
