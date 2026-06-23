@@ -187,11 +187,11 @@ function ResultContent() {
           <hr style={{ borderColor: theme.accentLight + "30" }} className="mb-6" />
 
           {/* 灵魂素描 */}
-          <SectionTitle theme={theme}>🪞 灵魂素描</SectionTitle>
+          <SectionTitle theme={theme}>灵魂素描</SectionTitle>
           <p className="text-sm leading-relaxed mb-6">{char.soulSketch}</p>
 
           {/* 亲密坐标 */}
-          <SectionTitle theme={theme}>🧭 亲密坐标</SectionTitle>
+          <SectionTitle theme={theme}>亲密坐标</SectionTitle>
           <RadarChart scores={char.radar} theme={theme} />
           <div className="mt-3 mb-6">
             {char.radarNotes.map((note, i) => (
@@ -200,15 +200,15 @@ function ResultContent() {
           </div>
 
           {/* 平日速写 */}
-          <SectionTitle theme={theme}>📱 平日速写</SectionTitle>
+          <SectionTitle theme={theme}>平日速写</SectionTitle>
           <p className="text-sm leading-relaxed mb-6">{char.modernProfile}</p>
 
           {/* 恋爱模式 */}
-          <SectionTitle theme={theme}>💘 恋爱模式</SectionTitle>
+          <SectionTitle theme={theme}>恋爱模式</SectionTitle>
           <p className="text-sm leading-relaxed mb-6">{char.loveStyle}</p>
 
           {/* 恋爱处方 */}
-          <SectionTitle theme={theme}>💊 恋爱处方</SectionTitle>
+          <SectionTitle theme={theme}>恋爱处方</SectionTitle>
           <ol className="text-sm leading-relaxed mb-6 list-decimal list-inside space-y-2">
             {char.prescription.map((p, i) => (
               <li key={i}>{p}</li>
@@ -224,7 +224,7 @@ function ResultContent() {
           )}
 
           {/* Top 3 成分 */}
-          <SectionTitle theme={theme}>🧬 角色成分</SectionTitle>
+          <SectionTitle theme={theme}>角色成分</SectionTitle>
           {scored.map((s, i) => (
             <div key={s.character!.id} className="mb-3">
               <div className="flex justify-between text-sm mb-1">
