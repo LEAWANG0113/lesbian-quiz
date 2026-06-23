@@ -210,11 +210,6 @@ function ResultContent() {
               />
             </a>
           )}
-          {!char.poster && char.doubanUrl && (
-            <a href={char.doubanUrl} target="_blank" rel="noopener noreferrer" className="block mb-4 text-xs" style={{ color: theme.accent }}>
-              豆瓣 →
-            </a>
-          )}
 
           {/* Quote */}
           <blockquote className="italic text-sm mb-5 pl-4" style={{ borderLeft: `3px solid ${theme.accent}`, color: theme.muted }}>
