@@ -39,6 +39,10 @@ export const questions: QuizQuestion[] = [
         text: "给她做早餐",
         scores: { tina: 2, adele: 3, hideko: 2 },
       },
+      {
+        text: "这跟性取向有什么关系？我就是正常起床",
+        scores: { lyt: 5, htt: 4 },
+      },
     ],
   },
   {
@@ -52,6 +56,10 @@ export const questions: QuizQuestion[] = [
       { text: "有趣/话多", scores: { alice: 2, vivian: 3 } },
       { text: "温柔/体贴", scores: { tina: 2, therese: 3, adele: 3 } },
       { text: "神秘/文艺", scores: { marianne: 4, hideko: 4 } },
+      {
+        text: "正常/普通，我跟其他女生没什么不同",
+        scores: { lyt: 5, htt: 4 },
+      },
     ],
   },
   {
@@ -80,6 +88,10 @@ export const questions: QuizQuestion[] = [
         text: "运动休闲，舒服最重要",
         scores: { dana: 2, adele: 3, emma: 3 },
       },
+      {
+        text: "穿衣服跟取向有什么关系啊，别刻板印象",
+        scores: { lyt: 5, htt: 4 },
+      },
     ],
   },
   {
@@ -107,6 +119,10 @@ export const questions: QuizQuestion[] = [
       {
         text: "观察所有人，回家写日记",
         scores: { marianne: 4, hideko: 3, jenny: 2 },
+      },
+      {
+        text: "我聚会不分男女的，跟谁都能聊",
+        scores: { lyt: 5, htt: 4 },
       },
     ],
   },
@@ -138,6 +154,10 @@ export const questions: QuizQuestion[] = [
         text: "低调消化，不让任何人看出来",
         scores: { carol: 4, marianne: 4, hideko: 3 },
       },
+      {
+        text: "我没有前任（女朋友），我是直的",
+        scores: { lyt: 6, htt: 5 },
+      },
     ],
   },
   {
@@ -166,6 +186,10 @@ export const questions: QuizQuestion[] = [
         text: "写一首诗回复她",
         scores: { marianne: 4, jenny: 2 },
       },
+      {
+        text: "我说了我没有女的前任，她只是我以前的好闺蜜",
+        scores: { lyt: 6, htt: 5 },
+      },
     ],
   },
   {
@@ -193,6 +217,10 @@ export const questions: QuizQuestion[] = [
       {
         text: "不够坦诚，藏太多",
         scores: { wil: 4, hideko: 4, marianne: 3 },
+      },
+      {
+        text: "我对女生没有感情问题，我们就是普通朋友关系",
+        scores: { lyt: 6, htt: 5 },
       },
     ],
   },
@@ -224,6 +252,10 @@ export const questions: QuizQuestion[] = [
         text: "跳舞跳到最后一个离开",
         scores: { sookhee: 4, carmen: 2, vivian: 3 },
       },
+      {
+        text: "我为什么会去lesbian bar？我是被朋友拉去的",
+        scores: { lyt: 6, htt: 5 },
+      },
     ],
   },
   {
@@ -251,6 +283,10 @@ export const questions: QuizQuestion[] = [
       {
         text: "看感觉，对的人什么时候都行",
         scores: { heloise: 4, therese: 3, dana: 1 },
+      },
+      {
+        text: "跟女生同居？那就是合租室友吧，很正常啊",
+        scores: { lyt: 6, htt: 5 },
       },
     ],
   },
@@ -280,6 +316,10 @@ export const questions: QuizQuestion[] = [
         text: "chart上的虚线——暧昧但从未official",
         scores: { therese: 4, adele: 3, dana: 1 },
       },
+      {
+        text: "什么chart？我没看过这个剧（但我搜过）",
+        scores: { lyt: 5, htt: 5 },
+      },
     ],
   },
   {
@@ -308,6 +348,10 @@ export const questions: QuizQuestion[] = [
         text: "夜店→天台→看日出，一整夜的冒险",
         scores: { vivian: 4, carmen: 3, helena: 1 },
       },
+      {
+        text: "这不叫约会吧，跟好朋友出去玩而已",
+        scores: { lyt: 5, htt: 5 },
+      },
     ],
   },
   {
@@ -335,6 +379,10 @@ export const questions: QuizQuestion[] = [
       {
         text: "陪在你身边就够了",
         scores: { therese: 4, wil: 3, adele: 3 },
+      },
+      {
+        text: "我们真的只是好朋友",
+        scores: { lyt: 7, htt: 6 },
       },
     ],
   },
