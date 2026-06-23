@@ -547,14 +547,13 @@ export const characters: Character[] = [
     theme: { bg: "#2a2015", cardBg: "#3a3025", accent: "#c09050", accentLight: "#5a4530", text: "#f0e0c8", muted: "#b09070", vibe: "泥土与自由，逃离的夜晚" },
   },
 
-  // === 彩蛋角色 ===
   {
     id: "lyt",
-    name: "李艺彤",
-    source: "彩蛋 · SNH48",
-    traits: ["否认", "口是心非", "深柜典范", "嘴硬心软"],
-    quote: "我们只是好朋友。",
-    soulSketch: `恭喜你解锁了隐藏角色！你在每道题里都在说"我不是""我没有""这跟我没关系"——但你点进来做了这个测试啊姐妹。你的否认技术已经达到了专业级别，嘴上说着"我们只是好朋友"，但你的眼神、你的小动作、你的整个能量场都在说另一件事。全世界都看出来了，就你自己还在演。`,
+    name: "李发卡",
+    source: "某河",
+    traits: ["女同性恨", "口是心非", "深柜典范", "嘴硬心软"],
+    quote: "我们只是商业CP。",
+    soulSketch: `你在每道题里都在说"我不是""我没有""这跟我没关系"——但你点进来做了这个测试啊姐妹。你的否认技术已经达到了专业级别，嘴上说着"我们只是商业CP"，是不是心里在纠结另一件事。十来年了，身边朋友同事都生娃了，你是否爱过还是未解之谜。`,
     radar: { avoidance: 100, attachment: 85, boundary: 95, intimacy: 30, loyalty: 70 },
     radarNotes: [
       "回避程度满分——你是回避的天花板，没有人比你更能装",
@@ -567,12 +566,12 @@ export const characters: Character[] = [
     prescription: [
       "姐妹，你都做到第12题了，还要骗自己到什么时候？",
       "不用急着跟全世界出柜，先试着对自己诚实",
-      "下次再说「我们只是好朋友」的时候，看看自己的心跳",
+      "下次再说「我们只是商业CP」的时候，看看自己的心跳",
     ],
     spiritFood: { title: "《面子》", author: "伍思薇", why: "看看Wil是怎么从「我没有在躲」走到「我不想再躲了」的" },
     loveStyle: "你的恋爱模式是：爱了但不承认，在一起但对外说是闺蜜，吵架了但不能找人倾诉因为没人知道你们的关系。累吗？",
     emoji: "🙈",
-    theme: { bg: "#1a0a20", cardBg: "#2a1535", accent: "#ff69b4", accentLight: "#4a2050", text: "#f0d0f0", muted: "#b080c0", vibe: "「我们真的只是好朋友」" },
+    theme: { bg: "#1a0a20", cardBg: "#2a1535", accent: "#ff69b4", accentLight: "#4a2050", text: "#f0d0f0", muted: "#b080c0", vibe: "「我们只是商业CP」" },
   },
   {
     id: "htt",
