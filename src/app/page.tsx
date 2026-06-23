@@ -1,39 +1,27 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 const films = [
-  { name: "The L Word", year: "2004", color: "#1a1a2e", accent: "#e94560" },
-  { name: "Carol", year: "2015", color: "#2d1f0e", accent: "#c9a96e" },
-  { name: "面子", year: "2004", color: "#0e2a1f", accent: "#4ecdc4" },
-  { name: "燃烧女子的肖像", year: "2019", color: "#1a0a2e", accent: "#a855f7" },
-  { name: "阿黛尔的生活", year: "2013", color: "#0a1a3e", accent: "#3b82f6" },
-  { name: "小姐", year: "2016", color: "#2e0a1a", accent: "#f43f5e" },
+  { name: "The L Word", year: "2004", poster: "/posters/the-l-word.jpg", accent: "#e94560" },
+  { name: "Carol", year: "2015", poster: "/posters/carol.jpg", accent: "#c9a96e" },
+  { name: "面子", year: "2004", poster: "/posters/saving-face.jpg", accent: "#4ecdc4" },
+  { name: "燃烧女子的肖像", year: "2019", poster: "/posters/portrait-of-a-lady-on-fire.jpg", accent: "#a855f7" },
+  { name: "阿黛尔的生活", year: "2013", poster: "/posters/blue-is-the-warmest-color.jpg", accent: "#3b82f6" },
+  { name: "小姐", year: "2016", poster: "/posters/the-handmaiden.jpg", accent: "#f43f5e" },
 ];
 
 function PosterCard({ film }: { film: (typeof films)[0] }) {
   return (
-    <div
-      className="flex-shrink-0 w-36 sm:w-44 h-52 sm:h-64 rounded-lg overflow-hidden relative"
-      style={{
-        backgroundImage: `linear-gradient(160deg, ${film.color} 0%, ${film.accent}30 100%)`,
-        border: `1px solid ${film.accent}25`,
-      }}
-    >
-      <div className="absolute inset-0 flex flex-col items-center justify-center p-3 text-center">
-        <div
-          className="text-3xl sm:text-4xl font-black mb-2 opacity-10"
-          style={{ color: film.accent }}
-        >
-          ♀
-        </div>
-        <p className="text-sm sm:text-base font-bold" style={{ color: `${film.accent}dd` }}>
-          {film.name}
-        </p>
-        <p className="text-[10px] mt-1" style={{ color: `${film.accent}66` }}>
-          {film.year}
-        </p>
-      </div>
+    <div className="flex-shrink-0 w-36 sm:w-44 h-52 sm:h-64 rounded-lg overflow-hidden relative">
+      <Image
+        src={film.poster}
+        alt={film.name}
+        fill
+        className="object-cover"
+        sizes="176px"
+      />
     </div>
   );
 }
@@ -77,7 +65,7 @@ export default function Home() {
       `}</style>
 
       {/* Scrolling poster rows */}
-      <div className="absolute inset-0 flex flex-col justify-center gap-3 opacity-40 pointer-events-none">
+      <div className="absolute inset-0 flex flex-col justify-center gap-3 opacity-50 pointer-events-none">
         <ScrollRow direction="left" />
         <ScrollRow direction="right" />
         <ScrollRow direction="left" />
@@ -88,7 +76,7 @@ export default function Home() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 50%, rgba(10,10,15,0.75) 0%, rgba(10,10,15,0.92) 60%, rgba(10,10,15,1) 100%)",
+            "radial-gradient(ellipse at 50% 50%, rgba(10,10,15,0.6) 0%, rgba(10,10,15,0.85) 50%, rgba(10,10,15,0.98) 100%)",
         }}
       />
 
@@ -169,7 +157,7 @@ export default function Home() {
 
       <div className="relative z-10 flex justify-center pb-6">
         <p className="text-[10px]" style={{ color: "rgba(255,255,255,0.12)" }}>
-          18个经典角色 · 5部电影 · 1部剧集
+          20个经典角色 · 5部电影 · 1部剧集
         </p>
       </div>
     </main>
