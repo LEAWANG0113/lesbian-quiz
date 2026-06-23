@@ -244,6 +244,30 @@ function ResultContent() {
             </div>
           ))}
 
+          {/* 影片信息 */}
+          {char.doubanUrl && char.poster && (
+            <div className="mt-6">
+              <SectionTitle theme={theme}>来自</SectionTitle>
+              <a
+                href={char.doubanUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-3 rounded-xl transition-opacity hover:opacity-80"
+                style={{ backgroundColor: theme.accentLight + "15", border: `1px solid ${theme.accentLight}30`, textDecoration: "none", color: theme.text }}
+              >
+                <img
+                  src={char.poster}
+                  alt={char.source}
+                  className="w-14 h-20 object-cover rounded-md flex-shrink-0"
+                />
+                <div>
+                  <p className="text-sm font-semibold">{char.source}</p>
+                  <p className="text-xs mt-1" style={{ color: theme.muted }}>在豆瓣查看 →</p>
+                </div>
+              </a>
+            </div>
+          )}
+
           {/* Footer */}
           <p className="text-center text-xs mt-6 italic" style={{ color: theme.muted }}>{theme.vibe}</p>
         </div>

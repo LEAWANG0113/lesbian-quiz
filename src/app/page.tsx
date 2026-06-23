@@ -65,7 +65,7 @@ export default function Home() {
       `}</style>
 
       {/* Scrolling poster rows */}
-      <div className="absolute inset-0 flex flex-col justify-center gap-3 opacity-50 pointer-events-none">
+      <div className="absolute inset-0 flex flex-col justify-center gap-3 opacity-70 pointer-events-none">
         <ScrollRow direction="left" />
         <ScrollRow direction="right" />
         <ScrollRow direction="left" />
@@ -76,7 +76,7 @@ export default function Home() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 50%, rgba(10,10,15,0.6) 0%, rgba(10,10,15,0.85) 50%, rgba(10,10,15,0.98) 100%)",
+            "radial-gradient(ellipse at 50% 50%, rgba(10,10,15,0.35) 0%, rgba(10,10,15,0.6) 50%, rgba(10,10,15,0.9) 100%)",
         }}
       />
 
