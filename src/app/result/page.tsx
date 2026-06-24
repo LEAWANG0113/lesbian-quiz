@@ -306,7 +306,7 @@ function ResultContent() {
         {savedImageUrl && (
           <div id="saved-image-section" className="mb-6 rounded-xl p-4 text-center" style={{ backgroundColor: theme.cardBg, border: `1px solid ${theme.accentLight}40` }}>
             <p className="text-sm mb-3" style={{ color: theme.muted }}>长按下方图片保存到相册</p>
-            <img src={savedImageUrl} alt="测试结果" className="w-full rounded-lg" />
+            <img src={savedImageUrl} alt="测试结果" className="rounded-lg" style={{ maxWidth: "100%", height: "auto", display: "block", margin: "0 auto" }} />
             <button onClick={() => setSavedImageUrl(null)} className="text-xs mt-3" style={{ color: theme.muted }}>关闭</button>
           </div>
         )}
