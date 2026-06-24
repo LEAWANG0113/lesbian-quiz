@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { questions } from "@/data/questions";
 import type { QuizOption } from "@/data/questions";
@@ -18,6 +18,16 @@ export default function QuizPage() {
   const [answers, setAnswers] = useState<QuizOption[]>([]);
   const [selected, setSelected] = useState<number | null>(null);
   const [transitioning, setTransitioning] = useState(false);
+
+  useEffect(() => {
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (currentIndex > 0) {
+        e.preventDefault();
+      }
+    };
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [currentIndex]);
 
   const question = questions[currentIndex];
   const progress = ((currentIndex + 1) / questions.length) * 100;
@@ -39,7 +49,12 @@ export default function QuizPage() {
         }
       }
       const encoded = encodeResult(rawScores);
-      router.push(`/result?r=${encoded}`);
+      const resultUrl = `/result?r=${encoded}`;
+      try {
+        router.push(resultUrl);
+      } catch {
+        window.location.href = resultUrl;
+      }
       return;
     }
 
