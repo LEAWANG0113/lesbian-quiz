@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { Suspense, useRef, useCallback } from "react";
+import { Suspense, useRef, useCallback, useState } from "react";
 import Link from "next/link";
 import { decodeResult } from "@/lib/quiz-engine";
 import { getCharacterById } from "@/data/characters";
@@ -145,23 +145,24 @@ function ResultContent() {
     }
   }, [shareUrl]);
 
+  const [savedImageUrl, setSavedImageUrl] = useState<string | null>(null);
+  const [saving, setSaving] = useState(false);
+
   const handleSaveImage = useCallback(async () => {
     const el = resultCardRef.current;
     if (!el) return;
+    setSaving(true);
     try {
       const html2canvas = (await import("html2canvas")).default;
-      const canvas = await html2canvas(el, { backgroundColor: theme.bg, scale: 2 });
+      const canvas = await html2canvas(el, { backgroundColor: theme.bg, scale: 2, useCORS: true });
       const dataUrl = canvas.toDataURL("image/png");
 
-      // Mobile: open image in new tab so user can long-press to save
-      // Desktop: trigger download
       const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       if (isMobile) {
-        const newTab = window.open();
-        if (newTab) {
-          newTab.document.write(`<html><head><title>长按保存图片</title><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;display:flex;flex-direction:column;align-items:center;background:#111;padding:20px"><p style="color:#999;font-size:14px;margin-bottom:10px">长按图片保存到相册</p><img src="${dataUrl}" style="max-width:100%;border-radius:12px" /></body></html>`);
-          newTab.document.close();
-        }
+        setSavedImageUrl(dataUrl);
+        setTimeout(() => {
+          document.getElementById("saved-image-section")?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
       } else {
         const link = document.createElement("a");
         link.download = `我是${char.name}.png`;
@@ -171,6 +172,7 @@ function ResultContent() {
     } catch {
       alert("图片生成失败，请尝试截屏保存");
     }
+    setSaving(false);
   }, [char.name, theme.bg]);
 
   return (
@@ -292,13 +294,22 @@ function ResultContent() {
 
         {/* Share buttons */}
         <div className="flex gap-3 mb-4">
-          <button onClick={handleSaveImage} className="flex-1 font-semibold py-3 rounded-full hover:opacity-90 transition-opacity" style={{ backgroundColor: theme.accent, color: theme.cardBg }}>
-            保存结果图片
+          <button onClick={handleSaveImage} disabled={saving} className="flex-1 font-semibold py-3 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50" style={{ backgroundColor: theme.accent, color: theme.cardBg }}>
+            {saving ? "生成中..." : "保存结果图片"}
           </button>
           <button onClick={handleCopyLink} className="flex-1 font-semibold py-3 rounded-full transition-colors" style={{ border: `2px solid ${theme.accent}`, color: theme.accent, backgroundColor: "transparent" }}>
             复制分享链接
           </button>
         </div>
+
+        {/* Mobile saved image */}
+        {savedImageUrl && (
+          <div id="saved-image-section" className="mb-6 rounded-xl p-4 text-center" style={{ backgroundColor: theme.cardBg, border: `1px solid ${theme.accentLight}40` }}>
+            <p className="text-sm mb-3" style={{ color: theme.muted }}>长按下方图片保存到相册</p>
+            <img src={savedImageUrl} alt="测试结果" className="w-full rounded-lg" />
+            <button onClick={() => setSavedImageUrl(null)} className="text-xs mt-3" style={{ color: theme.muted }}>关闭</button>
+          </div>
+        )}
 
         <Link href="/" className="block text-center text-sm transition-colors" style={{ color: theme.muted }}>
           重新测试
