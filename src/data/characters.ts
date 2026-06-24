@@ -42,7 +42,7 @@ export interface Character {
 export const characters: Character[] = [
   {
     id: "shane",
-    name: "Shane McCutcheon",
+    name: "Shane",
     source: "The L Word",
     traits: ["不羁", "万人迷", "承诺恐惧", "忠于自我"],
     quote: "I don't do girlfriends.",
@@ -132,7 +132,7 @@ export const characters: Character[] = [
   },
   {
     id: "dana",
-    name: "Dana Fairbanks",
+    name: "Dana",
     source: "The L Word",
     traits: ["害羞", "运动健将", "可爱", "深柜挣扎"],
     quote: "I can't be gay. I'm a tennis player.",
@@ -162,7 +162,7 @@ export const characters: Character[] = [
   },
   {
     id: "jenny",
-    name: "Jenny Schecter",
+    name: "Jenny",
     source: "The L Word",
     traits: ["文艺", "戏剧化", "敏感", "自我中心"],
     quote: "I'm a writer. I observe.",
@@ -280,7 +280,7 @@ export const characters: Character[] = [
   // === 卡罗尔 Carol ===
   {
     id: "carol",
-    name: "Carol Aird",
+    name: "Carol",
     source: "卡罗尔 Carol (2015)",
     traits: ["优雅", "成熟", "果断", "隐忍的激情"],
     quote: "I love you.",
@@ -310,7 +310,7 @@ export const characters: Character[] = [
   },
   {
     id: "therese",
-    name: "Therese Belivet",
+    name: "Therese",
     source: "卡罗尔 Carol (2015)",
     traits: ["安静", "好奇", "艺术感", "内敛的勇气"],
     quote: "I didn't know what to ask for.",
@@ -587,10 +587,10 @@ export const characters: Character[] = [
 
   {
     id: "lyt",
-    name: "李发卡",
+    name: "黄婷婷",
     source: "塞纳河",
     traits: ["女同性恨", "口是心非", "深柜典范", "嘴硬心软"],
-    quote: "我们只是商业CP。",
+    quote: "未婚，谢谢",
     soulSketch: `你在每道题里都在说"我不是""我没有""这跟我没关系"——但你点进来做了这个测试啊姐妹。你的否认技术已经达到了专业级别，嘴上说着"我们只是商业CP"，是不是心里在纠结另一件事。十来年了，身边朋友同事都生娃了，你是否爱过还是未解之谜。`,
     radar: { avoidance: 100, attachment: 85, boundary: 95, intimacy: 30, loyalty: 70 },
     radarNotes: [
@@ -617,10 +617,10 @@ export const characters: Character[] = [
   },
   {
     id: "htt",
-    name: "黄婷婷",
+    name: "李艺彤",
     source: "塞纳河",
     traits: ["配合否认", "心照不宣", "默契搭档", "欲盖弥彰"],
-    quote: "对，我们就是好姐妹。",
+    quote: "我们只是商业CP。",
     soulSketch: `你是否认界的最佳搭档——她说"我们只是朋友"，你接"对，就是好姐妹"。你们的配合天衣无缝，但每次对视的时候空气都在燃烧。你可能真的觉得自己"还没想清楚"，但你的身体语言、你们之间的默契、你看她时的眼神，都比任何告白更有说服力。`,
     radar: { avoidance: 90, attachment: 80, boundary: 85, intimacy: 40, loyalty: 80 },
     radarNotes: [
