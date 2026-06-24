@@ -41,7 +41,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "这跟性取向有什么关系？我就是正常起床",
-        scores: { htt: 5, lyt: 4 },
+        scores: { lyt: 5, htt: 4 },
       },
     ],
   },
@@ -58,7 +58,7 @@ export const questions: QuizQuestion[] = [
       { text: "神秘/文艺", scores: { marianne: 4, hideko: 4 } },
       {
         text: "正常/普通，我跟其他女生没什么不同",
-        scores: { htt: 5, lyt: 4 },
+        scores: { lyt: 5, htt: 4 },
       },
     ],
   },
@@ -90,7 +90,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "穿衣服跟取向有什么关系啊，别刻板印象",
-        scores: { htt: 5, lyt: 4 },
+        scores: { lyt: 5, htt: 4 },
       },
     ],
   },
@@ -122,7 +122,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "我聚会不分男女的，跟谁都能聊",
-        scores: { htt: 5, lyt: 4 },
+        scores: { lyt: 5, htt: 4 },
       },
     ],
   },
@@ -156,7 +156,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "我没有前女友，我是直的",
-        scores: { htt: 6, lyt: 5 },
+        scores: { lyt: 6, htt: 5 },
       },
     ],
   },
@@ -188,7 +188,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "我说了我没有前女友，她只是我以前的好闺蜜",
-        scores: { htt: 6, lyt: 5 },
+        scores: { lyt: 6, htt: 5 },
       },
     ],
   },
@@ -220,7 +220,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "我对女生没有感情问题，我们就是普通朋友关系",
-        scores: { htt: 6, lyt: 5 },
+        scores: { lyt: 6, htt: 5 },
       },
     ],
   },
@@ -254,7 +254,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "我为什么会去les bar？我是被朋友拉去的",
-        scores: { htt: 6, lyt: 5 },
+        scores: { lyt: 6, htt: 5 },
       },
     ],
   },
@@ -286,7 +286,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "跟女生同居？那就是合租室友吧，很正常啊",
-        scores: { htt: 6, lyt: 5 },
+        scores: { lyt: 6, htt: 5 },
       },
     ],
   },
@@ -318,7 +318,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "什么chart？我没看过这个剧（但我搜过）",
-        scores: { htt: 5, lyt: 5 },
+        scores: { lyt: 5, htt: 5 },
       },
     ],
   },
@@ -350,7 +350,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "这不叫约会吧，跟好朋友出去玩而已",
-        scores: { htt: 5, lyt: 5 },
+        scores: { lyt: 5, htt: 5 },
       },
     ],
   },
@@ -382,7 +382,7 @@ export const questions: QuizQuestion[] = [
       },
       {
         text: "我们真的只是好朋友",
-        scores: { htt: 7, lyt: 6 },
+        scores: { lyt: 7, htt: 6 },
       },
     ],
   },
