@@ -175,27 +175,88 @@ function ResultContent() {
     setSaving(false);
   }, [char.name, theme.bg]);
 
-  // LESE 彩蛋专属页面
+  // LESE 彩蛋专属页面 — 相亲档案风格
   if (char.id === "lese") {
     return (
-      <main className="flex flex-1 flex-col items-center justify-center px-4 py-12" style={{ backgroundColor: "#0a0a0a", color: "#e8e0f8" }}>
-        <div className="w-full max-w-md text-center">
-          <div ref={resultCardRef} className="rounded-2xl p-8 mb-6" style={{ backgroundColor: "#1a1a2e", border: "1px solid rgba(139,92,246,0.3)" }}>
-            <div className="text-5xl mb-4">🖤</div>
-            <p className="text-xs tracking-widest mb-4" style={{ color: "rgba(139,92,246,0.7)" }}>隐藏彩蛋解锁</p>
-            <h1 className="text-3xl font-black mb-6" style={{ background: "linear-gradient(135deg, #8b5cf6, #f472b6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-              恭喜！
-            </h1>
-            <p className="text-base leading-relaxed mb-6" style={{ color: "#c8c0e0" }}>
-              你和某个艺术家帅T非常合拍
-            </p>
-            <div className="rounded-xl p-5 mb-6" style={{ backgroundColor: "rgba(139,92,246,0.1)", border: "1px solid rgba(139,92,246,0.2)" }}>
-              <p className="text-sm mb-3" style={{ color: "#9080b0" }}>想知道这个帅T是谁？</p>
-              <p className="text-lg font-bold" style={{ color: "#8b5cf6" }}>打赏主创 ¥10 解锁帅T微信号</p>
+      <main className="flex flex-1 flex-col items-center px-4 py-8" style={{ backgroundColor: "#0a0a0a", color: "#e8e0f8" }}>
+        <div className="w-full max-w-md">
+          <div ref={resultCardRef} className="rounded-2xl overflow-hidden mb-6" style={{ backgroundColor: "#1a1a2e", border: "1px solid rgba(139,92,246,0.3)" }}>
+
+            {/* 惊喜头部 */}
+            <div className="p-6 text-center" style={{ background: "linear-gradient(180deg, rgba(139,92,246,0.2) 0%, transparent 100%)" }}>
+              <p className="text-[10px] tracking-[0.4em] uppercase mb-3" style={{ color: "rgba(139,92,246,0.6)" }}>系统检测到隐藏匹配</p>
+              <h1 className="text-2xl sm:text-3xl font-black mb-2" style={{ background: "linear-gradient(135deg, #8b5cf6, #f472b6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                等等...这不是电影角色
+              </h1>
+              <p className="text-sm" style={{ color: "#9080b0" }}>你匹配到了一个真人</p>
             </div>
-            <p className="text-xs italic" style={{ color: "#605080" }}>谨慎地拥有，珍惜地使用，勇敢地放弃</p>
+
+            {/* 照片轮播 */}
+            <div className="px-4 pb-4">
+              <div className="grid grid-cols-3 gap-2 mb-4">
+                <img src="/characters/lese-1.jpg" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
+                <img src="/characters/lese-2.jpg" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
+                <img src="/characters/lese-3.jpg" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
+              </div>
+            </div>
+
+            {/* 相亲档案 */}
+            <div className="px-6 pb-6">
+              <div className="flex items-center gap-3 mb-4">
+                <h2 className="text-2xl font-black" style={{ color: "#e8e0f8" }}>LESE</h2>
+                <span className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: "rgba(139,92,246,0.2)", color: "#8b5cf6" }}>25岁</span>
+                <span className="text-xs px-2 py-1 rounded-full" style={{ backgroundColor: "rgba(244,114,182,0.2)", color: "#f472b6" }}>Switch</span>
+              </div>
+
+              {/* 标签 */}
+              <div className="flex flex-wrap gap-2 mb-5">
+                {["大画家", "艺术家灵魂", "帅T", "ADHD", "暗黑系", "注意力需要被抓住"].map((tag) => (
+                  <span key={tag} className="text-[11px] px-3 py-1 rounded-full" style={{ backgroundColor: "rgba(139,92,246,0.1)", color: "#a78bfa", border: "1px solid rgba(139,92,246,0.2)" }}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <hr style={{ borderColor: "rgba(139,92,246,0.15)" }} className="mb-5" />
+
+              {/* 关于TA */}
+              <p className="text-xs tracking-widest mb-2" style={{ color: "rgba(139,92,246,0.5)" }}>关于 TA</p>
+              <p className="text-sm leading-relaxed mb-5" style={{ color: "#c0b8d8" }}>
+                一个画画的帅T，脑子里永远有一百个想法同时在跑。安静的时候在角落观察世界，开心的时候笑声能传三条街。穿衣一身黑但内心是彩色的。想抓住TA的心？先抓住TA的注意力——但小心，TA的注意力像猫一样，来得快去得也快。
+              </p>
+
+              {/* 攻略指南 */}
+              <p className="text-xs tracking-widest mb-2" style={{ color: "rgba(139,92,246,0.5)" }}>追TA攻略</p>
+              <div className="space-y-2 mb-5">
+                {[
+                  "不要无聊——TA的ADHD会让TA在3秒内判断你有没有意思",
+                  "聊艺术、聊想法、聊任何奇奇怪怪的东西",
+                  "别玩推拉那套——TA看得出来，而且会觉得无聊",
+                  "如果你能让TA放下画笔看你一眼，恭喜你已经赢了一半",
+                ].map((tip, i) => (
+                  <p key={i} className="text-xs leading-relaxed" style={{ color: "#9080b0" }}>
+                    {i + 1}. {tip}
+                  </p>
+                ))}
+              </div>
+
+              <hr style={{ borderColor: "rgba(139,92,246,0.15)" }} className="mb-5" />
+
+              {/* 解锁微信 */}
+              <div className="rounded-xl p-5 text-center" style={{ background: "linear-gradient(135deg, rgba(139,92,246,0.15), rgba(244,114,182,0.1))", border: "1px solid rgba(139,92,246,0.25)" }}>
+                <p className="text-lg font-bold mb-2" style={{ color: "#e8e0f8" }}>心动了？</p>
+                <p className="text-sm mb-4" style={{ color: "#9080b0" }}>打赏主创 ¥10 解锁这位帅T的微信号</p>
+                <p className="text-[10px]" style={{ color: "#605080" }}>（主创保证TA本人比照片更帅）</p>
+              </div>
+            </div>
+
+            {/* 底部 */}
+            <div className="px-6 pb-6 text-center">
+              <p className="text-xs italic" style={{ color: "#605080" }}>谨慎地拥有，珍惜地使用，勇敢地放弃</p>
+            </div>
           </div>
 
+          {/* 按钮 */}
           <div className="flex gap-3 mb-4">
             <button onClick={handleSaveImage} disabled={saving} className="flex-1 font-semibold py-3 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50" style={{ backgroundColor: "#8b5cf6", color: "#fff" }}>
               {saving ? "生成中..." : "保存结果图片"}
