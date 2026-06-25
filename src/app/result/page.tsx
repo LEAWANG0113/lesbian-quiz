@@ -178,7 +178,7 @@ function ResultContent() {
   // LESE 彩蛋专属页面
   if (char.id === "lese") {
     const [leseRevealed, setLeseRevealed] = useState(false);
-    const lesePhotos = ["/characters/lese-1.jpg", "/characters/lese-2.jpg", "/characters/lese-3.jpg", "/characters/lese-4.jpg"];
+    const lesePhotos = ["/characters/lese-1.webp", "/characters/lese-2.webp", "/characters/lese-3.webp", "/characters/lese-4.webp"];
     const allPhotos = [...lesePhotos, ...lesePhotos, ...lesePhotos, ...lesePhotos, ...lesePhotos, ...lesePhotos];
 
     return (
@@ -249,7 +249,7 @@ function ResultContent() {
                 <div ref={resultCardRef} className="rounded-2xl overflow-hidden mb-6" style={{ backgroundColor: "rgba(26,26,46,0.95)", border: "1px solid rgba(139,92,246,0.3)" }}>
 
                   {/* 大头照 */}
-                  <img src="/characters/lese-1.jpg" alt="LESE" className="w-full aspect-square object-cover" />
+                  <img src="/characters/lese-1.webp" alt="LESE" className="w-full aspect-square object-cover" />
 
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-4">
@@ -285,9 +285,9 @@ function ResultContent() {
 
                     {/* 更多照片 */}
                     <div className="grid grid-cols-3 gap-2 mb-5">
-                      <img src="/characters/lese-2.jpg" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
-                      <img src="/characters/lese-3.jpg" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
-                      <img src="/characters/lese-4.jpg" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
+                      <img src="/characters/lese-2.webp" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
+                      <img src="/characters/lese-3.webp" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
+                      <img src="/characters/lese-4.webp" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
                     </div>
 
                     <hr style={{ borderColor: "rgba(139,92,246,0.15)" }} className="mb-5" />
