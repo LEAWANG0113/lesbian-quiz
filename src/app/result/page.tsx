@@ -276,6 +276,29 @@ function ResultContent() {
 
                 <hr style={{ borderColor: "rgba(139,92,246,0.15)" }} className="mb-5" />
 
+                {/* 灵魂素描 */}
+                <SectionTitle theme={theme}>灵魂素描</SectionTitle>
+                <p className="text-sm leading-relaxed mb-6">{char.soulSketch}</p>
+
+                {/* 亲密坐标 */}
+                <SectionTitle theme={theme}>亲密坐标</SectionTitle>
+                <RadarChart scores={char.radar} theme={theme} />
+                <div className="mt-3 mb-6">
+                  {char.radarNotes.map((note, i) => (
+                    <p key={i} className="text-xs leading-relaxed mb-1" style={{ color: theme.muted }}>• {note}</p>
+                  ))}
+                </div>
+
+                {/* 平日速写 */}
+                <SectionTitle theme={theme}>平日速写</SectionTitle>
+                <p className="text-sm leading-relaxed mb-6">{char.modernProfile}</p>
+
+                {/* 恋爱模式 */}
+                <SectionTitle theme={theme}>恋爱模式</SectionTitle>
+                <p className="text-sm leading-relaxed mb-6">{char.loveStyle}</p>
+
+                <hr style={{ borderColor: "rgba(139,92,246,0.15)" }} className="mb-5" />
+
                 <div className="rounded-xl p-5 text-center" style={{ background: "linear-gradient(135deg, rgba(139,92,246,0.15), rgba(244,114,182,0.1))", border: "1px solid rgba(139,92,246,0.25)" }}>
                   <p className="text-lg font-bold mb-2" style={{ color: "#e8e0f8" }}>心动了？</p>
                   <p className="text-sm mb-4" style={{ color: "#9080b0" }}>打赏主创 ¥10 解锁这位帅T的微信号</p>
