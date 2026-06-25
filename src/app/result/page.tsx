@@ -193,10 +193,11 @@ function ResultContent() {
 
             {/* 照片轮播 */}
             <div className="px-4 pb-4">
-              <div className="grid grid-cols-3 gap-2 mb-4">
+              <div className="grid grid-cols-2 gap-2 mb-4">
                 <img src="/characters/lese-1.jpg" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
                 <img src="/characters/lese-2.jpg" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
-                <img src="/characters/lese-3.jpg" alt="LESE" className="w-full aspect-square object-cover rounded-lg" />
+                <img src="/characters/lese-3.jpg" alt="LESE" className="w-full aspect-[3/4] object-cover rounded-lg col-span-1" />
+                <img src="/characters/lese-4.jpg" alt="LESE的手" className="w-full aspect-[3/4] object-cover rounded-lg col-span-1" />
               </div>
             </div>
 
@@ -210,7 +211,7 @@ function ResultContent() {
 
               {/* 标签 */}
               <div className="flex flex-wrap gap-2 mb-5">
-                {["大画家", "艺术家灵魂", "帅T", "ADHD", "暗黑系", "注意力需要被抓住", "手指很长很美"].map((tag) => (
+                {["大画家", "艺术家灵魂", "帅T", "ADHD", "暗黑系", "注意力需要被抓住", "手指很长很美", "美甲爱好者"].map((tag) => (
                   <span key={tag} className="text-[11px] px-3 py-1 rounded-full" style={{ backgroundColor: "rgba(139,92,246,0.1)", color: "#a78bfa", border: "1px solid rgba(139,92,246,0.2)" }}>
                     {tag}
                   </span>
