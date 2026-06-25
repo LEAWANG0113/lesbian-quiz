@@ -269,13 +269,18 @@ function ResultContent() {
                     <hr style={{ borderColor: "rgba(139,92,246,0.15)" }} className="mb-5" />
 
                     <p className="text-xs tracking-widest mb-2" style={{ color: "rgba(139,92,246,0.5)" }}>关于 TA</p>
-                    <p className="text-sm leading-relaxed mb-5" style={{ color: "#c0b8d8" }}>
-                      艺术家，颜值担当，橘子念念未来第八位主演。思维因为太多灵感而总忘记自己要干嘛——但这没关系。
+                    <p className="text-sm leading-relaxed mb-3" style={{ color: "#c0b8d8" }}>
+                      艺术家，颜值担当，橘子念念未来第八位主演。脑子里灵感多到排队，经常画到一半忘了自己要干嘛——但这没关系，忘了就再来一遍，反正每次画出来的都不一样。
                     </p>
 
                     <p className="text-xs tracking-widest mb-2" style={{ color: "rgba(139,92,246,0.5)" }}>特长</p>
+                    <p className="text-sm leading-relaxed mb-3" style={{ color: "#c0b8d8" }}>
+                      手指特长（物理意义上的长）。手速快（害羞）。美甲爱好者——毕竟这么好看的手不装饰一下说不过去。
+                    </p>
+
+                    <p className="text-xs tracking-widest mb-2" style={{ color: "rgba(139,92,246,0.5)" }}>注意事项</p>
                     <p className="text-sm leading-relaxed mb-5" style={{ color: "#c0b8d8" }}>
-                      手指特长。优点有手速快（害羞）。美甲爱好者。
+                      跟TA聊天的时候不要介意话题突然跳到另一个星球，那只是灵感又来了。如果TA突然沉默了，大概率是在脑子里构图。
                     </p>
 
                     {/* 更多照片 */}
