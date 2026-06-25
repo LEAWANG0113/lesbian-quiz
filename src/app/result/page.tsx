@@ -210,7 +210,7 @@ function ResultContent() {
 
               {/* 标签 */}
               <div className="flex flex-wrap gap-2 mb-5">
-                {["大画家", "艺术家灵魂", "帅T", "ADHD", "暗黑系", "注意力需要被抓住"].map((tag) => (
+                {["大画家", "艺术家灵魂", "帅T", "ADHD", "暗黑系", "注意力需要被抓住", "手指很长很美"].map((tag) => (
                   <span key={tag} className="text-[11px] px-3 py-1 rounded-full" style={{ backgroundColor: "rgba(139,92,246,0.1)", color: "#a78bfa", border: "1px solid rgba(139,92,246,0.2)" }}>
                     {tag}
                   </span>
@@ -222,7 +222,7 @@ function ResultContent() {
               {/* 关于TA */}
               <p className="text-xs tracking-widest mb-2" style={{ color: "rgba(139,92,246,0.5)" }}>关于 TA</p>
               <p className="text-sm leading-relaxed mb-5" style={{ color: "#c0b8d8" }}>
-                一个画画的帅T，脑子里永远有一百个想法同时在跑。安静的时候在角落观察世界，开心的时候笑声能传三条街。穿衣一身黑但内心是彩色的。想抓住TA的心？先抓住TA的注意力——但小心，TA的注意力像猫一样，来得快去得也快。
+                一个画画的帅T，脑子里永远有一百个想法同时在跑。安静的时候在角落观察世界，开心的时候笑声能传三条街。穿衣一身黑但内心是彩色的。有一双超好看的手，时常因为欣赏自己的手指而忘记正在进行的主线任务。想抓住TA的心？先抓住TA的注意力——但小心，TA的注意力像猫一样，来得快去得也快。
               </p>
 
               {/* 攻略指南 */}
