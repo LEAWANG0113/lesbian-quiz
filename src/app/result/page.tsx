@@ -175,6 +175,52 @@ function ResultContent() {
     setSaving(false);
   }, [char.name, theme.bg]);
 
+  // LESE 彩蛋专属页面
+  if (char.id === "lese") {
+    return (
+      <main className="flex flex-1 flex-col items-center justify-center px-4 py-12" style={{ backgroundColor: "#0a0a0a", color: "#e8e0f8" }}>
+        <div className="w-full max-w-md text-center">
+          <div ref={resultCardRef} className="rounded-2xl p-8 mb-6" style={{ backgroundColor: "#1a1a2e", border: "1px solid rgba(139,92,246,0.3)" }}>
+            <div className="text-5xl mb-4">🖤</div>
+            <p className="text-xs tracking-widest mb-4" style={{ color: "rgba(139,92,246,0.7)" }}>隐藏彩蛋解锁</p>
+            <h1 className="text-3xl font-black mb-6" style={{ background: "linear-gradient(135deg, #8b5cf6, #f472b6)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+              恭喜！
+            </h1>
+            <p className="text-base leading-relaxed mb-6" style={{ color: "#c8c0e0" }}>
+              你和某个艺术家帅T非常合拍
+            </p>
+            <div className="rounded-xl p-5 mb-6" style={{ backgroundColor: "rgba(139,92,246,0.1)", border: "1px solid rgba(139,92,246,0.2)" }}>
+              <p className="text-sm mb-3" style={{ color: "#9080b0" }}>想知道这个帅T是谁？</p>
+              <p className="text-lg font-bold" style={{ color: "#8b5cf6" }}>打赏主创 ¥10 解锁帅T微信号</p>
+            </div>
+            <p className="text-xs italic" style={{ color: "#605080" }}>谨慎地拥有，珍惜地使用，勇敢地放弃</p>
+          </div>
+
+          <div className="flex gap-3 mb-4">
+            <button onClick={handleSaveImage} disabled={saving} className="flex-1 font-semibold py-3 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50" style={{ backgroundColor: "#8b5cf6", color: "#fff" }}>
+              {saving ? "生成中..." : "保存结果图片"}
+            </button>
+            <button onClick={handleCopyLink} className="flex-1 font-semibold py-3 rounded-full transition-colors" style={{ border: "2px solid #8b5cf6", color: "#8b5cf6", backgroundColor: "transparent" }}>
+              复制分享链接
+            </button>
+          </div>
+
+          {savedImageUrl && (
+            <div id="saved-image-section" className="mb-6 rounded-xl p-4 text-center" style={{ backgroundColor: "#1a1a2e", border: "1px solid rgba(139,92,246,0.3)" }}>
+              <p className="text-sm mb-3" style={{ color: "#9080b0" }}>长按下方图片保存到相册</p>
+              <img src={savedImageUrl} alt="测试结果" className="rounded-lg" style={{ maxWidth: "100%", height: "auto", display: "block", margin: "0 auto" }} />
+              <button onClick={() => setSavedImageUrl(null)} className="text-xs mt-3" style={{ color: "#9080b0" }}>关闭</button>
+            </div>
+          )}
+
+          <Link href="/" className="block text-center text-sm transition-colors" style={{ color: "#605080" }}>
+            重新测试
+          </Link>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="flex flex-1 flex-col items-center px-4 py-8 transition-colors duration-700" style={{ backgroundColor: theme.bg, color: theme.text }}>
       <div className="w-full max-w-xl">
