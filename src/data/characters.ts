@@ -645,6 +645,33 @@ export const characters: Character[] = [
     emoji: "🫣",
     theme: { bg: "#0a1020", cardBg: "#152035", accent: "#f472b6", accentLight: "#2a3050", text: "#e0d0f5", muted: "#9090c0", vibe: "「对，我们就是好姐妹」" },
   },
+
+  {
+    id: "lese",
+    name: "LESE",
+    source: "隐藏角色",
+    traits: ["帅T", "暗黑系", "又专一又花心", "仰天大笑"],
+    quote: "谨慎地拥有，珍惜地使用，勇敢地放弃",
+    soulSketch: "恭喜你解锁彩蛋！你和大帅T LESE超match。你们都是那种外表酷酷的、内心有自己世界的人。你看似随性，其实对感情有自己的一套逻辑——不轻易开始，但一旦认定就全力以赴。你的暗黑外表下藏着一颗温暖的心。",
+    radar: { avoidance: 50, attachment: 60, boundary: 80, intimacy: 65, loyalty: 85 },
+    radarNotes: [
+      "边界感很强——你知道自己要什么不要什么",
+      "忠诚度高——认定了就不会轻易放手",
+      "回避程度中等——不是不敢靠近，是在等对的人",
+    ],
+    modernProfile: "你穿一身黑但偶尔会有跳脱的颜色。你在聚会上先安静观察，融入后笑得最大声。你对钱的态度是不够花但也不会委屈自己。你处理分手的方式是恢复社交、培养爱好，然后从心底放下。",
+    soulEdge: "你的酷不是装出来的，是你真实的样子。你能在独处和社交之间自由切换，这种能力让很多人羡慕。",
+    hiddenSoft: "你有时候太理性了，理性到让人觉得你不在乎。但其实你只是不习惯把脆弱展示给别人看。",
+    prescription: [
+      "快去加LESE的微信，你们聊聊一定很合拍",
+      "你值得一个跟你一样酷的人",
+      "别再做测试了，直接去找真人吧",
+    ],
+    spiritFood: { title: "《面子》", author: "伍思薇", why: "看看两个酷酷的人是怎么在一起的" },
+    loveStyle: "你的恋爱方式：谨慎地开始，认真地对待，如果不合适也能潇洒放手。你不拖泥带水，但也不冷血无情。",
+    emoji: "🖤",
+    theme: { bg: "#0a0a0a", cardBg: "#1a1a1a", accent: "#8b5cf6", accentLight: "#3a2060", text: "#e8e0f8", muted: "#9080b0", vibe: "暗黑系帅T，等你来撩" },
+  },
 ];
 
 export function getCharacterById(id: string): Character | undefined {
