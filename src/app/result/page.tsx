@@ -82,6 +82,72 @@ function RadarChart({ scores, theme }: { scores: RadarScores; theme: CharacterTh
   );
 }
 
+function LeseUnlock() {
+  const [step, setStep] = useState<"cta" | "pay" | "wechat">("cta");
+  return (
+    <div className="rounded-xl p-5 text-center" style={{ background: "linear-gradient(135deg, rgba(139,92,246,0.15), rgba(244,114,182,0.1))", border: "1px solid rgba(139,92,246,0.25)" }}>
+      {step === "cta" && (
+        <>
+          <p className="text-lg font-bold mb-2" style={{ color: "#e8e0f8" }}>心动了？</p>
+          <p className="text-sm mb-4" style={{ color: "#9080b0" }}>打赏主创 ¥10 解锁这位帅T的微信号</p>
+          <button
+            onClick={() => setStep("pay")}
+            className="font-semibold px-8 py-3 rounded-full text-sm"
+            style={{ background: "linear-gradient(135deg, #8b5cf6, #f472b6)", color: "#fff" }}
+          >
+            我要解锁
+          </button>
+          <p className="text-[10px] mt-3" style={{ color: "#605080" }}>（主创保证TA本人比照片更帅）</p>
+        </>
+      )}
+      {step === "pay" && (
+        <>
+          <p className="text-sm mb-3" style={{ color: "#c0b8d8" }}>长按识别二维码打赏 ¥10</p>
+          <img src="/pay-10.png" alt="打赏二维码" className="w-48 h-48 mx-auto rounded-lg mb-3" style={{ objectFit: "contain" }} />
+          <p className="text-xs mb-4" style={{ color: "#9080b0" }}>付款时备注「lese」</p>
+          <button
+            onClick={() => setStep("wechat")}
+            className="font-semibold px-8 py-3 rounded-full text-sm"
+            style={{ background: "linear-gradient(135deg, #8b5cf6, #f472b6)", color: "#fff" }}
+          >
+            我已付款，查看微信号
+          </button>
+        </>
+      )}
+      {step === "wechat" && (
+        <>
+          <p className="text-sm mb-3" style={{ color: "#c0b8d8" }}>扫码添加主创微信，备注「lese」获取帅T微信号</p>
+          <img src="/wechat-qr.png" alt="微信二维码" className="w-48 h-48 mx-auto rounded-lg mb-3" style={{ objectFit: "contain" }} />
+          <p className="text-[10px]" style={{ color: "#605080" }}>添加后发送付款截图，主创会把帅T微信号发给你</p>
+        </>
+      )}
+    </div>
+  );
+}
+
+function TipSection({ theme }: { theme: CharacterTheme }) {
+  const [showTip, setShowTip] = useState(false);
+  return (
+    <div className="mb-4 text-center">
+      {!showTip ? (
+        <button
+          onClick={() => setShowTip(true)}
+          className="text-xs py-2 px-4 rounded-full transition-opacity hover:opacity-80"
+          style={{ border: `1px solid ${theme.accent}40`, color: theme.muted }}
+        >
+          如果这个测试让你会心一笑，请主创喝杯咖啡 ☕
+        </button>
+      ) : (
+        <div className="rounded-xl p-4" style={{ backgroundColor: theme.cardBg, border: `1px solid ${theme.accentLight}40` }}>
+          <p className="text-sm mb-3" style={{ color: theme.muted }}>长按识别二维码打赏 ¥5</p>
+          <img src="/pay-5.png" alt="打赏二维码" className="w-48 h-48 mx-auto rounded-lg" style={{ objectFit: "contain" }} />
+          <button onClick={() => setShowTip(false)} className="text-xs mt-3 block mx-auto" style={{ color: theme.muted }}>收起</button>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function SectionTitle({ children, theme }: { children: React.ReactNode; theme: CharacterTheme }) {
   return (
     <h2 className="text-base font-bold mb-3 flex items-center gap-2" style={{ color: theme.accent }}>
@@ -233,7 +299,7 @@ function ResultContent() {
             <div ref={resultCardRef} className="rounded-2xl overflow-hidden mb-6" style={{ backgroundColor: "rgba(26,26,46,0.95)", border: "1px solid rgba(139,92,246,0.3)" }}>
 
               {/* 大头照 */}
-              <img src="/characters/lese-1.webp" alt="LESE" className="w-full aspect-square object-cover" />
+              <img src="/characters/lese-2.webp" alt="LESE" className="w-full aspect-square object-cover" />
 
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-4">
@@ -243,7 +309,7 @@ function ResultContent() {
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-5">
-                  {["艺术家", "颜值担当", "橘子念念未来第八位主演", "灵感太多容易忘事", "美甲爱好者"].map((tag) => (
+                  {["ADHD种菜艺术家", "橘子念念未来第八位主演", "灵感太多容易忘事", "美甲爱好者"].map((tag) => (
                     <span key={tag} className="text-[11px] px-3 py-1 rounded-full" style={{ backgroundColor: "rgba(139,92,246,0.1)", color: "#a78bfa", border: "1px solid rgba(139,92,246,0.2)" }}>
                       {tag}
                     </span>
@@ -299,11 +365,7 @@ function ResultContent() {
 
                 <hr style={{ borderColor: "rgba(139,92,246,0.15)" }} className="mb-5" />
 
-                <div className="rounded-xl p-5 text-center" style={{ background: "linear-gradient(135deg, rgba(139,92,246,0.15), rgba(244,114,182,0.1))", border: "1px solid rgba(139,92,246,0.25)" }}>
-                  <p className="text-lg font-bold mb-2" style={{ color: "#e8e0f8" }}>心动了？</p>
-                  <p className="text-sm mb-4" style={{ color: "#9080b0" }}>打赏主创 ¥10 解锁这位帅T的微信号</p>
-                  <p className="text-[10px]" style={{ color: "#605080" }}>（主创保证TA本人比照片更帅）</p>
-                </div>
+                <LeseUnlock />
 
                 <p className="text-center text-xs italic mt-5" style={{ color: "#605080" }}>谨慎地拥有，珍惜地使用，勇敢地放弃</p>
               </div>
@@ -470,6 +532,9 @@ function ResultContent() {
             <button onClick={() => setSavedImageUrl(null)} className="text-xs mt-3" style={{ color: theme.muted }}>关闭</button>
           </div>
         )}
+
+        {/* 请主创喝咖啡 */}
+        <TipSection theme={theme} />
 
         <Link href="/" className="block text-center text-sm transition-colors" style={{ color: theme.muted }}>
           重新测试
