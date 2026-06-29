@@ -320,7 +320,7 @@ function ResultContent() {
 
                 <p className="text-xs tracking-widest mb-2" style={{ color: "rgba(139,92,246,0.5)" }}>关于 TA</p>
                 <p className="text-sm leading-relaxed mb-3" style={{ color: "#c0b8d8" }}>
-                  艺术家，颜值担当，橘子念念未来第八位主演。脑子里灵感多到排队，经常画到一半忘了自己要干嘛——但这没关系，忘了就再来一遍，反正每次画出来的都不一样。
+                  ADHD种菜艺术家，橘子念念未来第八位主演。脑子里灵感多到排队，经常画到一半忘了自己要干嘛——但这没关系，忘了就再来一遍，反正每次画出来的都不一样。
                 </p>
 
                 <p className="text-xs tracking-widest mb-2" style={{ color: "rgba(139,92,246,0.5)" }}>特长</p>
