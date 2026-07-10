@@ -48,6 +48,11 @@ export default function QuizPage() {
           rawScores[charId] = (rawScores[charId] || 0) + score;
         }
       }
+      // LESE 彩蛋：只有每一题都选了 lese 专属选项才保留，否则不触发
+      const leseAnswerCount = newAnswers.filter((opt) => "lese" in opt.scores).length;
+      if (leseAnswerCount < questions.length) {
+        delete rawScores.lese;
+      }
       const encoded = encodeResult(rawScores);
       const resultUrl = `/result?r=${encoded}`;
       try {
