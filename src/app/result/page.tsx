@@ -126,24 +126,13 @@ function LeseUnlock() {
 }
 
 function TipSection({ theme }: { theme: CharacterTheme }) {
-  const [showTip, setShowTip] = useState(false);
   return (
-    <div className="mb-4 text-center">
-      {!showTip ? (
-        <button
-          onClick={() => setShowTip(true)}
-          className="w-full font-semibold py-3 rounded-full transition-opacity hover:opacity-80"
-          style={{ border: `2px solid ${theme.accent}`, color: theme.accent, backgroundColor: "transparent" }}
-        >
-          如果这个测试让你会心一笑，请主创喝杯咖啡 ☕
-        </button>
-      ) : (
-        <div className="rounded-xl p-4" style={{ backgroundColor: theme.cardBg, border: `1px solid ${theme.accentLight}40` }}>
-          <p className="text-sm mb-3" style={{ color: theme.muted }}>长按识别二维码打赏 ¥5</p>
-          <img src="/pay-5.png" alt="打赏二维码" className="w-48 h-48 mx-auto rounded-lg" style={{ objectFit: "contain" }} />
-          <button onClick={() => setShowTip(false)} className="text-xs mt-3 block mx-auto" style={{ color: theme.muted }}>收起</button>
-        </div>
-      )}
+    <div className="mb-4 text-center rounded-xl p-5" style={{ backgroundColor: theme.cardBg, border: `1px solid ${theme.accentLight}40` }}>
+      <p className="font-semibold mb-1" style={{ color: theme.accent }}>
+        如果这个测试让你会心一笑，请主创喝杯咖啡 ☕
+      </p>
+      <p className="text-sm mb-4" style={{ color: theme.muted }}>长按识别下方二维码打赏 ¥5</p>
+      <img src="/pay-5.png" alt="打赏二维码" className="w-48 h-48 mx-auto rounded-lg" style={{ objectFit: "contain" }} />
     </div>
   );
 }
