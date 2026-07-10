@@ -132,8 +132,8 @@ function TipSection({ theme }: { theme: CharacterTheme }) {
       {!showTip ? (
         <button
           onClick={() => setShowTip(true)}
-          className="text-xs py-2 px-4 rounded-full transition-opacity hover:opacity-80"
-          style={{ border: `1px solid ${theme.accent}40`, color: theme.muted }}
+          className="w-full font-semibold py-3 rounded-full transition-opacity hover:opacity-80"
+          style={{ border: `2px solid ${theme.accent}`, color: theme.accent, backgroundColor: "transparent" }}
         >
           如果这个测试让你会心一笑，请主创喝杯咖啡 ☕
         </button>
@@ -514,6 +514,9 @@ function ResultContent() {
           <p className="text-center text-xs mt-6 italic" style={{ color: theme.muted }}>{theme.vibe}</p>
         </div>
 
+        {/* 请主创喝咖啡 */}
+        <TipSection theme={theme} />
+
         {/* Share buttons */}
         <div className="flex gap-3 mb-4">
           <button onClick={handleSaveImage} disabled={saving} className="flex-1 font-semibold py-3 rounded-full hover:opacity-90 transition-opacity disabled:opacity-50" style={{ backgroundColor: theme.accent, color: theme.cardBg }}>
@@ -532,9 +535,6 @@ function ResultContent() {
             <button onClick={() => setSavedImageUrl(null)} className="text-xs mt-3" style={{ color: theme.muted }}>关闭</button>
           </div>
         )}
-
-        {/* 请主创喝咖啡 */}
-        <TipSection theme={theme} />
 
         <Link href="/" className="block text-center text-sm transition-colors" style={{ color: theme.muted }}>
           重新测试
